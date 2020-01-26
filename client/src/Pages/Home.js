@@ -1,16 +1,19 @@
 import React from 'react'
 import Header from '../Components/Home/Header'
-import Navbar from '../Components/Home/Navbar'
+
 import LazyLoad from 'react-lazyload';
+import Tips from '../Components/Home/Tips';
+import Subscribe from '../Components/Home/Subscribe';
 
 
 const Home = () => {
   return (
     <React.Fragment>
-      <Navbar />
       <LazyLoad>
         <Header />
       </LazyLoad>
+      <Subscribe/>
+      <Tips/>
     </React.Fragment>
   );
 }

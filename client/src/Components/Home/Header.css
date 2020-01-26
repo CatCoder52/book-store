@@ -26,14 +26,6 @@
     margin-left: 3px;
   }
 
-  .top-nav-collapse {
-    background-color: #424f95 !important;
-  }
-
-  .navbar:not(.top-nav-collapse) {
-    background: transparent !important;
-  }
-
   @media (max-width: 991px) {
    .navbar:not(.top-nav-collapse) {
     background: #424f95 !important;

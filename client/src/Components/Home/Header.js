@@ -12,8 +12,7 @@ const Header = () => {
       <div
         className='view'
         style={{
-          backgroundImage:
-            'url("https://mdbootstrap.com/img/Photos/Others/architecture.jpg")',
+          backgroundImage: 'url("./img/architecture.jpg")',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center'
