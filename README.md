@@ -30,7 +30,32 @@ npm install
 npm run dev
 ```
 
+
+
+## Some Core Features
+
+- CRUD Operation
+- Dynamic API Call With Playground
+- Swagger UI
+- Swagger Doc
+- Express Query (Dynamic URL customize)
+- Fetch Data From MongoDB-Mongoose backend
+- 100% RESPONSIVE 👌
+- Contact Form VALIDATION ✔
+- Dynamic Notification
+- Animation
+- Hover effect
+- Dynamic name included contact form notification onSubmit 
+
+
+
 ![](\express.png)
+
+
+
+
+
+
 
 ## Show your support
 

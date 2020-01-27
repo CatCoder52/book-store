@@ -64,7 +64,6 @@ class Subscribe extends Component {
                 >
                   <div className='input-group mb-3'>
                     <input
-                      type='text'
                       required
                       type='email'
                       name='email'
@@ -94,7 +93,7 @@ class Subscribe extends Component {
                 <img
                   src='./img/6.jpg'
                   alt='Sample image'
-                  className='img-fluid shadow ml-sm-3'
+                  className='img-fluid shadow-lg ml-sm-3'
                 />
                 <img
                   src='./img/circle-shape.png'

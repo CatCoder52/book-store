@@ -1,9 +1,10 @@
 import React from 'react'
-import Header from '../Components/Home/Header'
-
 import LazyLoad from 'react-lazyload';
+
+import Header from '../Components/Home/Header'
 import Tips from '../Components/Home/Tips';
 import Subscribe from '../Components/Home/Subscribe';
+import Features from '../Components/Home/Features';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <LazyLoad>
         <Header />
       </LazyLoad>
+      <Features/>
       <Subscribe/>
       <Tips/>
     </React.Fragment>
