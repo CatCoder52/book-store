@@ -1,11 +1,9 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var BookSchema = new Schema({
+const BookSchema = new Schema({
     title: {type: String, required: true},
-    image: {type: String, required: true},
-    price: {type: String, required: true},
     author: { type: Schema.ObjectId, ref: 'Author', required: true },
     summary: {type: String, required: true},
     isbn: {type: String, required: true},

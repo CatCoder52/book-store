@@ -1,29 +1,26 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const cors = require('cors');
 
-// Resource
-var Resource = require('resourcejs');
-var _ = require('lodash');
-const swaggerUi = require('swagger-ui-express');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const booksRouter = require('./routes/book'); 
+const booksinstanceRouter = require('./routes/bookInstance'); 
+const authorsRouter = require('./routes/author'); 
+const genresRouter = require('./routes/genre'); 
 
-const book = require('./models/book')
-const author = require('./models/author')
-const instance = require('./models/bookinstance')
-const genre = require('./models/genre')
+const compression = require('compression');
+const helmet = require('helmet');
 
-var compression = require('compression');
-var helmet = require('helmet');
-
-var app = express();
+const app = express();
 
 // Set up mongoose connection
-var mongoose = require('mongoose');
-var dev_db_url = 'mongodb://localhost:27017/library';
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoose = require('mongoose');
+const dev_db_url = 'mongodb://localhost:27017/library';
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, {
   useCreateIndex: true,
   useFindAndModify: false,
@@ -31,7 +28,7 @@ mongoose.connect(mongoDB, {
   useUnifiedTopology: true
 });
 mongoose.Promise = global.Promise;
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('open', () => console.info('Database connected!✨'));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
@@ -46,51 +43,13 @@ app.use(helmet());
 app.use(compression()); // Compress all routes
 
 //app.use(express.static(path.join(__dirname, 'public')));
-// Define all our resources.
-var resources = {
-	book: Resource(app, '', 'book', book).get().put().post().delete().index(),
-	author: Resource(app, '', 'author', author).get().put().post().delete().index(),
-	instance: Resource(app, '', 'instance', instance).get().put().post().delete().index(),
-	genre: Resource(app, '', 'genre', genre).get().put().post().delete().index(),
-};
 
-// Get the Swagger paths and definitions for each resource.
-var paths = {};
-var definitions = {};
-_.each(resources, function(resource) {
-  var swagger = resource.swagger();
-  paths = _.assign(paths, swagger.paths);
-  definitions = _.assign(definitions, swagger.definitions);
-});
-
-// Define the specification.
-var swaggerDocument = {
-  swagger: '2.0',
-  info: {
-    description: '',
-    version: '0.0.1',
-    title: '',
-    contact: {
-      name: 'syed.simanta06@gmail.com'
-    },
-    license: {
-      name: 'MIT',
-      url: 'http://opensource.org/licenses/MIT'
-    }
-  },
-  host: 'localhost:5000',
-  basePath: '',
-  schemes: ['http'],
-  definitions: definitions,
-  paths: paths
-};
-
-// Show the specification at the URL.
-app.get('/spec', function(req, res, next) {
-	res.json(swaggerDocument);
-});
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/books', booksRouter);
+app.use('/booksinstance', booksinstanceRouter);
+app.use('/authors', authorsRouter);
+app.use('/genres', genresRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

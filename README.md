@@ -1,22 +1,19 @@
-<h1 align="center">Welcome to iLib 👋</h1>
+<h1 align="center">Welcome to Natours-Node 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
+[                         Library System]: https://node-express-library-app.herokuapp.com/
 
-
-​                                                         **NODE | MONGODB | REACTJS | EXPRESSJS**
-> **Note:** The **iLib** is kind of library book management & book selling system with CRUD
+​                                                         **NODE MONGODB PUG EXPRESSJS**
 
 ### All Links Here :link:
 
-|        Live        |            https://#            |
-| :----------------: | :-----------------------------: |
-| **API Playground** | http://localhost:5000/api-docs/ |
-|   **DOC Online**   |                                 |
-|                    |                                 |
+| HOME | https://node-express-library-app.herokuapp.com/ |
+| :--: | :---------------------------------------------: |
+|      |                                                 |
 
-
+> **Note:** The **node-express-library** is kind of library book management system with almost all features & CRUD
 
 ## Install:saxophone:
 
@@ -27,35 +24,17 @@ npm install
 ## Usage
 
 ```sh
-npm run dev
+npm run serverstart
 ```
 
+![](\Web server form handling.png)
 
-
-## Some Core Features
-
-- CRUD Operation
-- Dynamic API Call With Playground
-- Swagger UI
-- Swagger Doc
-- Express Query (Dynamic URL customize)
-- Fetch Data From MongoDB-Mongoose backend
-- 100% RESPONSIVE 👌
-- Contact Form VALIDATION ✔
-- Dynamic Notification
-- Animation
-- Hover effect
-- Dynamic name included contact form notification onSubmit 
-
-
-
-![](\express.png)
-
-
-
-
-
-
+- `catalog/` — The home/index page.
+- `catalog//` — The list of all books, bookinstances, genres, or authors (e.g. /`catalog/books/`, /`catalog/genres/`, etc.)
+- `catalog//**` — The detail page for a specific book, bookinstance, genre, or author with the given `*_id*` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37)`.
+- `catalog//create` — The form to create a new book, bookinstance, genre, or author (e.g. `/catalog/book/create)`.
+- `catalog//**/update` — The form to update a specific book, bookinstance, genre, or author with the given `*_id*` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37/update)`.
+- `catalog//**/delete` — The form to delete a specific book, bookinstance, genre, author with the given `*_id*` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37/delete)`.
 
 ## Show your support
 
