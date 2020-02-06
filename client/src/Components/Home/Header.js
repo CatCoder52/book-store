@@ -38,8 +38,8 @@ const Header = () => {
               {/*Grid column*/}
               <div className='col-md-12 white-text book-center flex-column mb-5'>
                 <h1 className='h1-responsive font-weight-bold text-white'>
-                  <strong className='display-10 deep-orange-text'>4</strong>
-                  <strong className='t-shadow-bg'>SISTER BOOK SHOP</strong>
+                  <strong className='display-10 deep-orange-text'>3</strong>
+                  <strong className='t-shadow-bg'>SISTERS BOOK SHOP</strong>
                 </h1>
                 <h6 className='mb-4 text-white t-shadow-bg'>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.

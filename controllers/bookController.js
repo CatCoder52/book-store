@@ -7,6 +7,7 @@ const { body, validationResult } = require('express-validator');
 const { sanitizeBody } = require('express-validator');
 
 const async = require('async');
+const APIFeatures = require('../utils/apiFeatures');
 
 exports.index = function(req, res) {
   async.parallel(
@@ -38,18 +39,26 @@ exports.index = function(req, res) {
   );
 };
 
+/* exports.aliasBooks = (req, res, next) => {
+  req.query.limit = '3';
+  req.query.sort = '-title';
+  req.query.fields = 'name,price,title';
+  next();
+}; */
+
 // Display list of all books.
-exports.book_list = function(req, res, next) {
-  Book.find({}, 'title author')
-    .populate('author')
-    .exec(function(err, list_books) {
-      if (err) {
-        return next(err);
-      } else {
-        // Successful, so render
-        res.json(list_books);
-      }
-    });
+exports.book_list = async function(req, res, next) {
+
+  const features = new APIFeatures(Book.find(), req.query)
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  // const doc = await features.query.explain();
+  const doc = await features.query;
+  // Successful, so render.
+  res.status(200).json(doc);
 };
 
 // Display detail page for a specific book.
@@ -63,7 +72,7 @@ exports.book_detail = function(req, res, next) {
           .exec(callback);
       },
       book_instance: function(callback) {
-        BookInstance.find({book: req.params.id})
+        BookInstance.find({ book: req.params.id })
           .populate('book')
           .exec(callback);
       }

@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Book from '../Global/Book';
+
 class LatestBooks extends Component {
   // Books State
   state = {
     books: []
   };
 
-
   async componentDidMount() {
     this.getBooks();
   }
 
   getBooks = async () => {
+    const res = await axios.get('/books/books?limit=3');
 
-      const res = await axios.get('/catalog');
-
-      console.log(res.data);
-
-      this.setState({
-        books: res.data
-      });
+    this.setState({
+      books: res.data
+    });
   };
 
   render() {
     return (
-      <div className='container pyy-5'>
+      <div className='container myy-5'>
         {/*Section: Content*/}
         <section className='dark-grey-text text-center'>
           {/* Section heading */}
@@ -37,7 +35,11 @@ class LatestBooks extends Component {
             totam voluptas nostrum quisquam eum porro a pariatur veniam.
           </p>
           {/* Grid row */}
-          <div className='row'>{/* Grid column */}</div>
+          <div className='row'>
+            {this.state.books.map(book => (
+              <Book key={book._id} {...book} />
+            ))}
+          </div>
           {/* Grid row */}
         </section>
         {/*Section: Content*/}

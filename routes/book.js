@@ -33,6 +33,6 @@ router.post('/book/:id/update', book_controller.book_update_post);
 router.get('/book/:id', book_controller.book_detail);
 
 // GET request for list of all Book.
-router.get('/books', book_controller.book_list);
+router.get('/books',  book_controller.book_list);
 
 module.exports = router;
