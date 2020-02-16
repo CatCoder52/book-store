@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LazyLoad from 'react-lazyload';
-const Book = ({ image, author, price, title, summary, genre }) => {
+import { Link } from 'react-router-dom'
+
+
+const Book = ({ url, image, author, price, title, summary, genre} ) => {
 
 const {first_name, family_name} = author
 
 const authorName = `${first_name} ${family_name}`
 
 
-
 // Genre Dynamic name, color, icon fun
-let [genreName] = genre;
+//const category = genre.map(g => g.name);
 
-let category = genreName.name;
+const category = genre.map(g => g.name);
 
   const categoryColor = () => {
-    switch (category) {
+const categoryx = [...new Set(category)];
+
+    switch (categoryx[0]) {  
       case 'Fantasy':
         return 'pink';
         break;
@@ -31,7 +35,8 @@ let category = genreName.name;
   };
 
   const categoryIcon = () => {
-    switch (category) {
+  const categoryx = [...new Set(category)];
+    switch (categoryx[0]) {
       case 'Fantasy':
         return 'fa-book';
         break;
@@ -53,9 +58,7 @@ let category = genreName.name;
         <LazyLoad>
           <img className='img-book' src={image} alt='Sample image' />
         </LazyLoad>
-        <div className={`price-tag ${categoryColor()}`}>
-          ${price}
-        </div>
+        <div className={`price-tag ${categoryColor()}`}>${price}</div>
         <a>
           <div className='mask rgba-white-slight' />
         </a>
@@ -72,11 +75,14 @@ let category = genreName.name;
       <p>
         by <a className='font-weight-bold'>{authorName}</a>
       </p>
-      <p className='dark-grey-text text-wrap'>{summary}</p>
+      <p className='dark-grey-text text-wrap text-left'>{summary}</p>
       {/* Read more button */}
-      <a className={`btn btn-${categoryColor()} btn-rounded btn-md`}>
+      <Link
+        to={url}
+        className={`btn btn-${categoryColor()} btn-rounded btn-md`}
+      >
         Read more
-      </a>
+      </Link>
     </div>
   );
 };

@@ -47,7 +47,7 @@ app.use(compression()); // Compress all routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
-app.use('/booksinstance', booksinstanceRouter);
+app.use('/booksinstances', booksinstanceRouter);
 app.use('/authors', authorsRouter);
 app.use('/genres', genresRouter);
 

@@ -91,7 +91,7 @@ class Subscribe extends Component {
               {/* Grid column */}
               <div className='col-lg-4 offset-lg-2'>
                 <img
-                  src='./img/6.jpg'
+                  src='https://drive.google.com/uc?id=1gccGtKauC_MGuJmrwHdfzJScgRwoDBlk'
                   alt='Sample image'
                   className='img-fluid shadow-lg ml-sm-3'
                 />

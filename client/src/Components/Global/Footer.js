@@ -39,7 +39,9 @@ const Footer = () => {
             </div>
             <div className='col-lg-6 col-md-6 col-sm-12'>
               <div className='sm-center text-right'>
-                <img src='./img/payment.png' alt />
+                <img
+                  src='https://drive.google.com/uc?id=1rsw3ZuUv4zrC20qyUIqVbGneD3f5ucCu'
+                />
               </div>
             </div>
           </div>

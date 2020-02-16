@@ -1,3 +1,4 @@
+const aqp = require('api-query-params');
 const Book = require('../models/book');
 const Author = require('../models/author');
 const Genre = require('../models/genre');
@@ -47,7 +48,7 @@ exports.index = function(req, res) {
 }; */
 
 // Display list of all books.
-exports.book_list = async function(req, res, next) {
+/* exports.book_list = async function(req, res, next) {
 
   const features = new APIFeatures(Book.find(), req.query)
     .filter()
@@ -59,8 +60,23 @@ exports.book_list = async function(req, res, next) {
   const doc = await features.query;
   // Successful, so render.
   res.status(200).json(doc);
-};
+}; */
 
+exports.book_list = function(req, res, next) {
+  const { filter, skip, limit, sort, projection, population } = aqp(req.query);
+  Book.find(filter)
+    .skip(skip)
+    .limit(limit)
+    .sort(sort)
+    .select(projection)
+    .populate(population)
+    .exec((err, books) => {
+      if (err) {
+        return next(err);
+      }
+      res.status(200).json(books);
+    });
+};
 // Display detail page for a specific book.
 exports.book_detail = function(req, res, next) {
   async.parallel(

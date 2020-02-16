@@ -10,11 +10,9 @@
 
 ### All Links Here :link:
 
-|        Live        |                      https://#                       |
-| :----------------: | :--------------------------------------------------: |
-| **API Playground** |           http://localhost:5000/api-docs/            |
-|   **DOC Online**   |                                                      |
-|    Old Version     | https://github.com/syedsimanta03/node-mepn-stack-app |
+| Live URL:        www. |
+| :-------------------- |
+| DOC:         ww.w     |
 
 
 
@@ -36,9 +34,7 @@ npm run dev
 
 - CRUD Operation
 - Dynamic API Call With Playground
-- Dynamic query(Custom Hack to use all Mongoose Query API)🤞
-- Swagger UI
-- Swagger Doc
+- Dynamic query(Custom Hack to use all Mongoose Query API+Filter+RegEX+Aggregate)🤞
 - Express Query (Dynamic URL customize) -front end
 - Fetch Data From MongoDB-Mongoose backend
 - 100% RESPONSIVE minimal UI👌
@@ -50,6 +46,8 @@ npm run dev
 - Data Fetching Using AXIOS
 - Custom CSS & Dynamic colour use for categories
 - Lazy Load Image
+- React Hooks 🏑
+- E-commerce with Stripe Payment-Gateway💲
 
 
 

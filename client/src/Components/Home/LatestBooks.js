@@ -1,27 +1,14 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-
+import React from 'react';
+import useAxios from 'axios-hooks';
 import Book from '../Global/Book';
+import Spinner from '../Global/Spinner';
 
-class LatestBooks extends Component {
+const LatestBooks = () => {
   // Books State
-  state = {
-    books: []
-  };
+  const [{ data, loading, error }, refetch] = useAxios('/books/books?limit=3');
 
-  async componentDidMount() {
-    this.getBooks();
-  }
+  if (error) return <p>Error!</p>;
 
-  getBooks = async () => {
-    const res = await axios.get('/books/books?limit=3');
-
-    this.setState({
-      books: res.data
-    });
-  };
-
-  render() {
     return (
       <div className='container myy-5'>
         {/*Section: Content*/}
@@ -36,16 +23,17 @@ class LatestBooks extends Component {
           </p>
           {/* Grid row */}
           <div className='row'>
-            {this.state.books.map(book => (
-              <Book key={book._id} {...book} />
-            ))}
+            {!loading ? (
+              data.map(book => <Book key={book._id} {...book} />)
+            ) : (
+              <Spinner />
+            )}
           </div>
           {/* Grid row */}
         </section>
         {/*Section: Content*/}
       </div>
     );
-  }
 }
 
 export default LatestBooks;

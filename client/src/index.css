@@ -170,6 +170,7 @@ strong {
   padding: 10rem 0;
 }
 
+
 .btn-rounded {
   border-radius: 10em;
 }
@@ -181,7 +182,7 @@ strong {
 .z-9 {
   z-index: 999 !important;
 }
-.z-9 {
+.z-10 {
   z-index: 1000 !important;
 }
 
@@ -252,4 +253,32 @@ strong {
   border-radius: 50%;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.ant-spin-spinning {
+    position: absolute !important;
+    display: inline-block;
+    opacity: 1;
+    left: 50%;
+    right: 50%;
+}
+
+.search {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    right: 25%;
+}
+
+.search-ui {
+    background-color: #ffffffde;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
