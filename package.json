@@ -6,11 +6,11 @@
   },
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "dev": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "server": "SET DEBUG=library:* & npm run devstart",
     "client": "cd client && npm start",
-    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\"",
+    "start": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\"",
     "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
