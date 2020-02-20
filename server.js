@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const cors = require('cors');
+//const cors = require('cors');
 
 const usersRouter = require('./routes/users');
 const booksRouter = require('./routes/book'); 
@@ -32,7 +32,7 @@ db.on('open', () => console.info('Database connected!✨'));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
-app.use(cors('*'));
+//app.use(cors('*'));
 
 app.use(logger('dev'));
 app.use(express.json());
