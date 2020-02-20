@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
-const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const booksRouter = require('./routes/book'); 
 const booksinstanceRouter = require('./routes/bookInstance'); 
@@ -44,7 +43,6 @@ app.use(compression()); // Compress all routes
 
 //app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
 app.use('/booksinstances', booksinstanceRouter);
