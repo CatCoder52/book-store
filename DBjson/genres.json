@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5df68549837ce22bd00d2cea"},"name":"Fantasy","__v":0}
+{"_id":{"$oid":"5df68549837ce22bd00d2ceb"},"name":"Science Fiction","__v":0}
+{"_id":{"$oid":"5df68549837ce22bd00d2cec"},"name":"Horror","__v":0}

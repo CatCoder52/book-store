@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5df68546837ce22bd00d2ce5"},"first_name":"Alena","family_name":"Crusz","date_of_birth":{"$date":"1973-06-06T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"5df68549837ce22bd00d2ce6"},"first_name":"Ria","family_name":"Lia","date_of_birth":{"$date":{"$numberLong":"-1172296400000"}},"__v":0}
+{"_id":{"$oid":"5df68549837ce22bd00d2ce7"},"first_name":"Julia","family_name":"Comiya","date_of_birth":{"$date":{"$numberLong":"-1577836800000"}},"date_of_death":{"$date":"1992-04-06T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"5df68549837ce22bd00d2ce9"},"first_name":"Jim","family_name":"Jones","date_of_birth":{"$date":"1971-12-16T00:00:00Z"},"__v":0}

@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5df6854f837ce22bd00d2cf4"},"status":"Available","book":{"$oid":"5df68549837ce22bd00d2ced"},"imprint":"London Gollancz, 2014.","due_back":{"$date":"2019-12-15T19:11:11.661Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cf5"},"status":"Loaned","book":{"$oid":"5df68549837ce22bd00d2cef"},"imprint":" Gollancz, 2011.","due_back":{"$date":"2019-12-15T19:11:11.663Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cf6"},"status":"Maintenance","book":{"$oid":"5df68549837ce22bd00d2cee"},"imprint":" Gollancz, 2015.","due_back":{"$date":"2019-12-15T19:11:11.663Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cf7"},"status":"Available","book":{"$oid":"5df68549837ce22bd00d2cf2"},"imprint":"New York Tom Doherty Associates, 2016.","due_back":{"$date":"2019-12-15T19:11:11.664Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cf8"},"status":"Available","book":{"$oid":"5df68549837ce22bd00d2cf2"},"imprint":"New York Tom Doherty Associates, 2016.","due_back":{"$date":"2019-12-15T19:11:11.665Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cf9"},"status":"Available","book":{"$oid":"5df68549837ce22bd00d2cf2"},"imprint":"New York Tom Doherty Associates, 2016.","due_back":{"$date":"2019-12-15T19:11:11.666Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cfa"},"status":"Available","book":{"$oid":"5df68549837ce22bd00d2cf1"},"imprint":"New York, NY Tom Doherty Associates, LLC, 2015.","due_back":{"$date":"2019-12-15T19:11:11.667Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cfb"},"status":"Maintenance","book":{"$oid":"5df68549837ce22bd00d2cf1"},"imprint":"New York, NY Tom Doherty Associates, LLC, 2015.","due_back":{"$date":"2019-12-15T19:11:11.668Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cfc"},"status":"Loaned","book":{"$oid":"5df68549837ce22bd00d2cf1"},"imprint":"New York, NY Tom Doherty Associates, LLC, 2015.","due_back":{"$date":"2019-12-15T19:11:11.669Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cfd"},"status":"Maintenance","book":{"$oid":"5df68549837ce22bd00d2ced"},"imprint":"Imprint XXX2","due_back":{"$date":"2019-12-15T19:11:11.67Z"},"__v":0}
+{"_id":{"$oid":"5df6854f837ce22bd00d2cfe"},"status":"Maintenance","book":{"$oid":"5df68549837ce22bd00d2cef"},"imprint":"Imprint XXX3","due_back":{"$date":"2019-12-15T19:11:11.671Z"},"__v":0}
