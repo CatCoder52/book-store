@@ -44,7 +44,6 @@ const Shop = () => {
             type='text'
             placeholder='Search ex: slow'
             aria-label='Search'
-            value={data}
             onBlur={e => setData(`/books/books?title=/${e.target.value}/i`)}
           />
           <button
