@@ -23,6 +23,7 @@ BookSchema.virtual('url').get(function() {
   return '/books/book/' + this._id;
 });
 
+
 BookSchema.pre(/^find/, function(next) {
   this.populate({
   path:'author genre',

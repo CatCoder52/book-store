@@ -170,7 +170,6 @@ strong {
   padding: 10rem 0;
 }
 
-
 .btn-rounded {
   border-radius: 10em;
 }
@@ -239,9 +238,13 @@ strong {
 
 .img-book {
   width: 100%;
-  height: auto;
+  height: 550px;
   background: transparent;
-  object-fit: unset;
+  object-fit: fill;
+  padding: 20px;
+  background-color: #cac5b9;
+  background-image: url(http://www.transparenttextures.com/patterns/wood-pattern.png);
+  border: 1px solid #99c47f;
 }
 
 .price-tag {
@@ -260,25 +263,25 @@ strong {
 }
 
 .ant-spin-spinning {
-    position: absolute !important;
-    display: inline-block;
-    opacity: 1;
-    left: 50%;
-    right: 50%;
+  position: absolute !important;
+  display: inline-block;
+  opacity: 1;
+  left: 50%;
+  right: 50%;
 }
 
 .search {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    right: 25%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  right: 25%;
 }
 
 .search-ui {
-    background-color: #ffffffde;
-    padding: 20px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #ffffffde;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
