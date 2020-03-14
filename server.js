@@ -48,7 +48,7 @@ app.use('/books', booksRouter);
 app.use('/booksinstances', booksinstanceRouter);
 app.use('/authors', authorsRouter);
 app.use('/genres', genresRouter);
-/* 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -64,7 +64,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.send(err);
 });
- */
+
 // Server static assets if in production
 if (process.env.NODE_ENV === 'production') {
   // Set static folder

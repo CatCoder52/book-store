@@ -246,7 +246,10 @@ strong {
   background-image: url(http://www.transparenttextures.com/patterns/wood-pattern.png);
   border: 1px solid #99c47f;
 }
-
+.hover:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+cursor:pointer;
+}
 .price-tag {
   position: absolute;
   top: -14px;

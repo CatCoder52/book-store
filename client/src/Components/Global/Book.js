@@ -56,7 +56,7 @@ const categoryx = [...new Set(category)];
     <div className='col-lg-4 col-md-12 mb-4'>
       <div className='overlay rounded shadow mb-4'>
         <LazyLoad>
-          <img className='img-book' src={image} alt='Sample image' />
+          <img className='img-book hover' src={image} alt='Sample image' />
         </LazyLoad>
         <div className={`price-tag ${categoryColor()}`}>${price}</div>
         <a>
